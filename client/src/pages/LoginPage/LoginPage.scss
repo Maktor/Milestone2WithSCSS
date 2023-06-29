@@ -1,0 +1,91 @@
+$primary-color: #080808;
+$secondary-color: #1a1a1a;
+$accent-color: #ffc296;
+$accent-hover-color: #c9ffcc;
+$background-overlay-color: rgba(23, 23, 23, 0.5);
+$box-shadow-color: rgba(78, 78, 78, 0.3);
+$input-border-radius: 5px;
+$button-border-radius: 5px;
+$form-padding: 50px;
+$input-padding: 10px;
+$input-margin-bottom: 10px;
+$input-font-size: 13px;
+$input-max-width: 300px;
+$button-padding: 10px;
+$button-font-size: 13px;
+$button-max-width: 300px;
+
+body {
+  background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+
+  form {
+    background-color: $background-overlay-color;
+    padding: $form-padding;
+    border-radius: $input-border-radius;
+    box-shadow: 0 0 10px $box-shadow-color;
+
+    input {
+      color: white;
+      display: block;
+      width: 100%;
+      padding: $input-padding;
+      margin-bottom: $input-margin-bottom;
+      font-size: $input-font-size;
+      border: none;
+      border-radius: $input-border-radius;
+      max-width: $input-max-width;
+      box-sizing: border-box;
+      background-color: $secondary-color;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: $button-padding;
+      font-size: $button-font-size;
+      background-color: $accent-color;
+      border: none;
+      border-radius: $button-border-radius;
+      cursor: pointer;
+      max-width: $button-max-width;
+      box-sizing: border-box;
+
+      &:hover {
+        background-color: $accent-hover-color;
+      }
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.SplashScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; 
+  color: #fff;
+  font-size: 2rem;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 5s ease-in-out;
+
+  &-fadeOut {
+    opacity: 0;
+  }
+}
